@@ -67,6 +67,21 @@ Using browser automation may violate Instagram's Terms of Use. Use this script a
 
 Instagram frequently updates its interface, so this script may require maintenance over time.
 
+## How It Works
+
+The script uses a few core browser automation techniques:
+
+- DOM traversal to find the relevant controls and post containers.
+- Event handling to simulate the clicks needed to trigger the UI.
+- `async`/`await` with configurable delays to keep the interaction pace stable.
+- Basic dialog handling to dismiss temporary prompts when they appear.
+
+## Limitations
+
+- The script depends on Instagram's current interface structure.
+- It may need updates if Instagram changes its UI or selectors.
+- It is not affiliated with or endorsed by Instagram or Meta.
+
 ## License
 
 MIT License
