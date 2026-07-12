@@ -1,5 +1,9 @@
 # Instagram Bulk Unlike
 
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Browser](https://img.shields.io/badge/Browser-Chrome%20%7C%20Edge%20%7C%20Firefox-blue)
+
 Automate the bulk removal of liked Instagram posts directly from your browser using a lightweight JavaScript console script.
 
 > ⚠️ This project is unofficial and is not affiliated with Instagram or Meta.
@@ -14,8 +18,6 @@ Automate the bulk removal of liked Instagram posts directly from your browser us
 - ✅ No installation required
 - ✅ Runs entirely in your browser
 
-> ⚠️ This project is unofficial and is not affiliated with Instagram or Meta.
-
 ## Requirements
 
 - Google Chrome, Microsoft Edge, or Firefox
@@ -25,14 +27,7 @@ Automate the bulk removal of liked Instagram posts directly from your browser us
 ## Usage
 
 1. Open Instagram.
-2. Navigate to:
-
-	```
-	Profile
-	→ Your Activity
-	→ Likes
-	```
-
+2. Go to **Profile → Your Activity → Likes**.
 3. Press **F12** or **Ctrl + Shift + J** to open Developer Tools.
 4. Open the **Console** tab.
 5. Copy the contents of `script.js`.
@@ -51,6 +46,12 @@ The script will automatically:
 
 You can customize these values at the top of the script:
 
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `DELETION_BATCH_SIZE` | Likes processed per batch | `20` |
+| `DELAY_BETWEEN_ACTIONS_MS` | Delay between actions | `1500 ms` |
+| `DELAY_BETWEEN_CHECKBOX_CLICKS_MS` | Delay between checkbox clicks | `300 ms` |
+
 ```javascript
 const DELETION_BATCH_SIZE = 20;
 const DELAY_BETWEEN_ACTIONS_MS = 1500;
@@ -59,11 +60,38 @@ const DELAY_BETWEEN_CHECKBOX_CLICKS_MS = 300;
 
 Increase the delays if Instagram starts showing temporary errors.
 
+## Browser Support
+
+| Browser | Status |
+|----------|--------|
+| Chrome | ✅ |
+| Edge | ✅ |
+| Firefox | ✅ |
+| Safari | ⚠️ Untested |
+
+## Screenshots
+
+![Before](screenshots/before.png)
+![Running](screenshots/running.png)
+![Demo](screenshots/demo.gif)
+
+## Project Structure
+
+```text
+instagram-bulk-unlike/
+├── README.md
+├── LICENSE
+├── script.js
+├── .gitignore
+└── screenshots/
+    ├── demo.gif
+    ├── before.png
+    └── running.png
+```
+
 ## Disclaimer
 
-This project is provided for educational purposes only.
-
-Using browser automation may violate Instagram's Terms of Use. Use this script at your own risk.
+This project is intended for educational purposes and personal account management. Users are responsible for complying with Instagram's Terms of Use.
 
 Instagram frequently updates its interface, so this script may require maintenance over time.
 
